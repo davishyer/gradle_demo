@@ -1,0 +1,60 @@
+// PART 2 - Dependencies
+// repositories {
+//   mavenCentral()
+// }
+
+apply plugin: "java"
+
+// PART 2 - Dependencies
+// dependencies {
+//   compile("org.apache.commons:commons-lang3:3.3.2")
+// }
+
+// PART 1 - Basics
+// sourceSets {
+//   main {
+//     java {
+//       srcDir("src/main")
+//     }
+//   }
+// }
+
+// jar {
+//   // PART 2 - Dependencies
+//   // from configurations.compile.collect { zipTree(it) }
+//   // PART 1 - Basics
+//   manifest {
+//     attributes("Main-Class": "net.dhyer.gradleTutorial.Main")
+//   }
+// }
+
+// PART 3 - Tasks
+// task hello {
+//   group "Greeting"
+//   description "Greets you"
+
+//   // configuration phase
+//   println("Configuring hello task...")
+//   ext {
+//     author = "dhyer"
+//   }
+
+//   doLast { println("Hello!") }
+//   doLast { println("======") }
+//   doFirst { println("======") }
+//   doFirst { println("Authored by: $author") }
+// }
+
+// PART 3 - Tasks
+// task runJar(type: Exec, dependsOn: jar) {
+//   // mimic $ java -jar build/libs/gradle_demo.jar "Hello World" "from Gradle"
+//   executable "java"
+//   args "-jar", "$jar.archivePath", "Hello World", "from Gradle"
+// }
+
+// PART 3 - Tasks
+// task run(type: JavaExec, dependsOn: classes) {
+//   main "net.dhyer.gradleTutorial.Main"
+//   classpath sourceSets.main.runtimeClasspath
+//   args "Hello World", "from Gradle"
+// }
